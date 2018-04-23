@@ -27,7 +27,7 @@ class Db extends \Foolz\Cache\Storage
             ->fetch();
 
         if (!$result || ($result['expiration'] > 0 && $result['created'] + $result['expiration'] > time())) {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         return $result['value'];

@@ -24,7 +24,7 @@ class Volatile extends \Foolz\Cache\Storage
     public function get($key)
     {
         if (!isset(static::$storage[$key])) {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         if (static::$storage[$key]['expiration'] && static::$storage[$key]['expiration'] + static::$storage[$key]['created'] > time()) {

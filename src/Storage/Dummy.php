@@ -16,7 +16,7 @@ class Dummy extends \Foolz\Cache\Storage
 
     public function get($key)
     {
-        return \Foolz\Cache\Void::forge();
+        return \Foolz\Cache\FoolVoid::forge();
     }
 
     public  function set($key, $value, $expiration)

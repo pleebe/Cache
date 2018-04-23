@@ -2,24 +2,24 @@
 
 namespace Foolz\Cache;
 
-class Void
+class FoolVoid
 {
     /**
      * We don't need more than one of these
      *
-     * @var  \Foolz\Cache\Void
+     * @var  \Foolz\Cache\FoolVoid
      */
     public static $instance = null;
 
     /**
-     * Returns the instance of Void
+     * Returns the instance of FoolVoid
      *
-     * @return  \Foolz\Cache\Void  The instance
+     * @return  \Foolz\Cache\FoolVoid  The instance
      */
     public static function forge()
     {
         if (static::$instance === null) {
-            static::$instance = new \Foolz\Cache\Void;
+            static::$instance = new \Foolz\Cache\FoolVoid;
         }
 
         return static::$instance;
