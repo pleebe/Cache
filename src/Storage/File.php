@@ -21,7 +21,7 @@ class File extends \Foolz\Cache\Storage
         if (file_exists($path.'.cache')) {
             $result = file_get_contents($path.'.cache');
         } else {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         $expiration = 0;
@@ -30,7 +30,7 @@ class File extends \Foolz\Cache\Storage
         }
 
         if ($expiration && time() < $expiration + filemtime($path.'.expiration')) {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         return $result;

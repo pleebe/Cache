@@ -19,7 +19,7 @@ class Memcached extends \Foolz\Cache\Storage
         $result = $this->getConfig()->getConnection()->get($key);
 
         if ($result === false && $this->getConfig()->getConnection()->getResultCode() === \Memcached::RES_NOTFOUND) {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         return $result;

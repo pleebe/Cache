@@ -19,7 +19,7 @@ class Redis extends \Foolz\Cache\Storage
         $result = $this->getConfig()->getConnection()->get($key);
 
         if ($result === null) {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
 
         return $result;

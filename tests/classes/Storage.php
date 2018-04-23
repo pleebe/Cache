@@ -23,7 +23,7 @@ class Storage extends PHPUnit_Framework_TestCase
 
 	public function testGetVoid()
 	{
-		$this->assertSame(\Foolz\Cache\Void::forge(), Cache::item('bevoid')->get('shouldntexist'));
+		$this->assertSame(\Foolz\Cache\FoolVoid::forge(), Cache::item('bevoid')->get('shouldntexist'));
 	}
 
 	public function testGetSet()
@@ -37,7 +37,7 @@ class Storage extends PHPUnit_Framework_TestCase
 		Cache::item('getsetconfig')->set('value');
 		Cache::item('getsetconfig')->delete();
 
-		$this->assertSame(\Foolz\Cache\Void::forge(), Cache::item('bevoid')->get('shouldntexist'));
+		$this->assertSame(\Foolz\Cache\FoolVoid::forge(), Cache::item('bevoid')->get('shouldntexist'));
 	}
 
 	public function testFlush()
@@ -48,6 +48,6 @@ class Storage extends PHPUnit_Framework_TestCase
 
 		Cache::forge()->flush();
 
-		$this->assertSame(\Foolz\Cache\Void::forge(), Cache::item('bevoid')->get('shouldntexist'));
+		$this->assertSame(\Foolz\Cache\FoolVoid::forge(), Cache::item('bevoid')->get('shouldntexist'));
 	}
 }

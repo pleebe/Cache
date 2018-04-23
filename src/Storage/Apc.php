@@ -22,7 +22,7 @@ class Apc extends \Foolz\Cache\Storage
         if ($success) {
             return $value;
         } else {
-            return \Foolz\Cache\Void::forge();
+            return \Foolz\Cache\FoolVoid::forge();
         }
     }
 
