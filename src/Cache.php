@@ -202,11 +202,11 @@ class Cache
     {
         $result = $this->getEngine()->get($this->getKey());
 
-        if ($this->getConfig()->getThrow() && $result instanceof \Foolz\Cache\Void) {
+        if ($this->getConfig()->getThrow() && $result instanceof \Foolz\Cache\FoolVoid) {
             throw new \OutOfBoundsException('The value wasn\'t found for the specified key.');
         }
 
-        if ($result instanceof \Foolz\Cache\Void) {
+        if ($result instanceof \Foolz\Cache\FoolVoid) {
             return $result;
         }
 
