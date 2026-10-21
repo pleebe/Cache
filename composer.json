@@ -11,7 +11,10 @@
         "irc": "irc://irc.irchighway.net/fooldriver"
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": "^8.1"
+    },
+    "config": {
+        "platform": { "php": "8.1.0" }
     },
     "require-dev": {
         "doctrine/dbal": ">=2.3.0"
